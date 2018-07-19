@@ -1,0 +1,22 @@
+{
+    "name": "zerojs-router",
+    "version": "0.0.1",
+    "description": "Simple Router",
+    "main": "./src/router/router.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/zerosuxx/zerojs-router.git"
+    },
+    "scripts": {
+        "test": "mocha 'src/**/*.spec.js'",
+        "cover": "istanbul cover node_modules/mocha/bin/_mocha -- src/**/*.spec.js"
+    },
+    "author": "Mohos Tamás",
+    "license": "ISC",
+    "dependencies": {},
+    "devDependencies": {
+        "chai": "^4.1.2",
+        "istanbul": "^0.4.5",
+        "mocha": "^5.2.0"
+    }
+}
