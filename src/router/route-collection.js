@@ -35,4 +35,28 @@ module.exports = class RouteCollection {
     [Symbol.iterator]() { 
         return this.getIterator();
     }
+
+    /*_findRoute(request) {
+        const path = request.path;
+        const method = request.method;
+        const routes = this.findRoutes(path);
+        const template = route.getTemplate();
+        var templateRegex = /:([a-z0-9-_]+)/gim;
+
+        const keys = [];
+        let urlRegex = template.replace(/\/\*$/, '(?:/(.*))?');
+        while(result = templateRegex.exec(template)) {
+            urlRegex = urlRegex.replace(result[0], '(?:([^/]+))');
+            keys.push(result[1]);
+        }
+
+        var params = new RegExp(urlRegex).exec(path);
+        var args = [];
+        if(keys.length && params) {
+            for(var i = 0; i <= keys.length; i++) {
+                
+            }
+            args = params.slice(keys.length).filter(value => value !== undefined);
+        }
+    }*/
 };
