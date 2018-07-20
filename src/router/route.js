@@ -1,6 +1,15 @@
 module.exports = class Route {
-    constructor(template) {
+    constructor(template, defaults = {}) {
         this.template = template;
+        this.defaults = defaults;
+    }
+    
+    getTemplate() {
+        return this.template;
+    }
+    
+    getDefaults() {
+        return this.defaults;
     }
 
     getPath() {
