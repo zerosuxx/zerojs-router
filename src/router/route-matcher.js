@@ -1,3 +1,5 @@
+const Route = require('./route');
+
 module.exports = class RouteMatcher {
     constructor(collection) {
         this.collection = collection;
@@ -8,10 +10,17 @@ module.exports = class RouteMatcher {
         return this.collection.findRoutes(path);
     }
     
-    parseArgs(url) {
-        return url
+    parseArgs(path) {
+        return path
             .split('/')
             .filter(value => value !== '')
             .map(value => decodeURIComponent(value));
+    }
+
+    /**
+     * @param {Route} route 
+     */
+    _matchRoute(route) {
+        
     }
 };
